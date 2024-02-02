@@ -14,6 +14,31 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 
+# Modify banner
+cat >package/base-files/files/etc/banner <<EOF
+ ██████╗ ██████╗ ███████╗███╗   ██╗██╗    ██╗██████╗ ████████╗
+██╔═══██╗██╔══██╗██╔════╝████╗  ██║██║    ██║██╔══██╗╚══██╔══╝
+██║   ██║██████╔╝█████╗  ██╔██╗ ██║██║ █╗ ██║██████╔╝   ██║
+██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║██║███╗██║██╔══██╗   ██║
+╚██████╔╝██║     ███████╗██║ ╚████║╚███╔███╔╝██║  ██║   ██║
+ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝
+ -----------------------------------------------------
+ %D %V, %C
+ -----------------------------------------------------
+EOF
+
+
+# Modify app name
+#sed -i 's/"IPSec VPN 服务器"/"IPSec VPN"/g' package/feeds/luci/luci-app-ipsec-server/po/*/ipsec-server.po # `grep "IPSec VPN 服务器" -rl ./`
+#sed -i 's/"IPSec VPN 服务器"/"IPSec VPN"/g' package/feeds/luci/luci-app-ipsec-vpnd/po/*/ipsec.po          # `grep "IPSec VPN 服务器" -rl ./`
+
+
+sed -i 's/"Frp 内网穿透"/"Frp客户端"/g' package/feeds/luci/luci-app-frpc/po/zh-cn/frp.po # `grep "Frp 内网穿透" -rl ./`
+sed -i 's/"Frps"/"Frp服务端"/g' package/feeds/luci/luci-app-frps/po/zh-cn/frps.po # `grep "Frps" -rl ./`
+
+
+
+
 
 
 ##修改默认主题
@@ -23,8 +48,7 @@
 #sed -i "s/hostname='.*'/hostname='$OWRT_NAME'/g" ./package/base-files/files/bin/config_generate
 
 ##修改默认时区
-#sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/config_generate
-#sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
+#sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 
 ##根据源码来修改
