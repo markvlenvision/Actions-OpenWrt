@@ -33,9 +33,9 @@
 #sed -i 's/"IPSec VPN 服务器"/"IPSec VPN"/g' package/feeds/luci/luci-app-ipsec-vpnd/po/*/ipsec.po          # `grep "IPSec VPN 服务器" -rl ./`
 
 
-sed -i 's/"Frp 内网穿透"/"Frp客户端"/g' package/feeds/luci/luci-app-frpc/po/zh-cn/frp.po # `grep "Frp 内网穿透" -rl ./`
-sed -i 's/"Frps"/"Frp服务端"/g' package/feeds/luci/luci-app-frps/po/zh-cn/frps.po # `grep "Frps" -rl ./`
-
+#sed -i 's/"Frp 内网穿透"/"Frp客户端"/g' package/feeds/luci/luci-app-frpc/po/zh-cn/frp.po # `grep "Frp 内网穿透" -rl ./`
+#sed -i 's/"Frps"/"Frp服务端"/g' package/feeds/luci/luci-app-frps/po/zh-cn/frps.po # `grep "Frps" -rl ./`
+#
 
 
 
