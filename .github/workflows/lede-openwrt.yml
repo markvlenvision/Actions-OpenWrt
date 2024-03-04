@@ -41,6 +41,9 @@ jobs:
      - name: go vision
        run: |
          sudo go version
+         sudo apt update
+         sudo apt install golang-go
+         sudo go version
 
 #    - name: Checkout
 #      uses: actions/checkout@main
