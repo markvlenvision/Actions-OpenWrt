@@ -34,7 +34,7 @@
 
 
 sed -i 's/"Frp 内网穿透"/"Frp 客户端"/g' package/feeds/luci/luci-app-frpc/po/zh-cn/frp.po # `grep "Frp 内网穿透" -rl ./`
-sed -i 's/"Frps - 通用设置"/"Frp 服务端 - 通用设置"/g' package/feeds/luci/luci-app-frps/po/zh-cn/frps.po # `grep "Frps" -rl ./`
+sed -i 's/"Frps - 通用设置"/"Frp 服务端 - 通用设置"/g' package/feeds/luci/luci-app-frps/po/zh-cn/frps.po # `grep "Frps - 通用设置" -rl ./`
 
 
 
