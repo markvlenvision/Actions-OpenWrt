@@ -62,14 +62,15 @@ jobs:
         sudo rm -rf /usr/local/go
         sudo rm -rf /usr/bin/go
         sudo wget -P /usr/local https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+        cd /usr/local
         sudo chmod 755 go1.22.0.linux-amd64.tar.gz
         sudo tar -zxvf go1.22.0.linux-amd64.tar.gz
-        echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main' >> feeds.conf.default
         echo '' >> ~/.bashrc
         echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
         echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bashrc
         echo 'export GOPATH=/home/gpo/go' >> ~/.bashrc
         source ~/.bashrc
+        cd ~
         go version
 
     - name: Clone source code
