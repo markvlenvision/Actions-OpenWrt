@@ -63,11 +63,18 @@ jobs:
         sudo rm -rf /usr/bin/go
         sudo wget -P /usr/local https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
         sudo chmod 755 /usr/local/go1.22.0.linux-amd64.tar.gz
-        sudo tar -C /usr/local/ -zxvf /usr/local/go1.22.0.linux-amd64.tar.gz
+        sudo tar -C /usr/local/ -zxf /usr/local/go1.22.0.linux-amd64.tar.gz
+        echo '' >> /etc/profile
+        echo 'export GOROOT=/usr/local/go' >> /etc/profile
+        echo 'export GOPATH=$HOME/gowork' >> /etc/profile
+        echo 'export GOBIN=$GOPATH/bin' >> /etc/profile
+        echo 'export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH' >> /etc/profile
         echo '' >> ~/.bashrc
         echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
-        echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bashrc
-        echo 'export GOPATH=/home/gpo/go' >> ~/.bashrc
+        echo 'export GOPATH=$HOME/gowork' >> ~/.bashrc
+        echo 'export GOBIN=$GOPATH/bin' >> ~/.bashrc
+        echo 'export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH' >> ~/.bashrc
+        source /etc/profile
         source ~/.bashrc
         go version
 
