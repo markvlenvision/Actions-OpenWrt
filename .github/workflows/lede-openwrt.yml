@@ -55,29 +55,6 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
-    - name: Update GoLang
-      run: |
-        sudo apt-get remove -y golang-go
-        sudo apt-get remove -y --auto-remove golang-go
-        sudo rm -rf /usr/local/go
-        sudo rm -rf /usr/bin/go
-        sudo wget -P /usr/local https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
-        sudo chmod 755 /usr/local/go1.22.0.linux-amd64.tar.gz
-        sudo tar -C /usr/local/ -zxf /usr/local/go1.22.0.linux-amd64.tar.gz
-        echo '' >> /etc/profile
-        echo 'export GOROOT=/usr/local/go' >> /etc/profile
-        echo 'export GOPATH=$HOME/gowork' >> /etc/profile
-        echo 'export GOBIN=$GOPATH/bin' >> /etc/profile
-        echo 'export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH' >> /etc/profile
-        echo '' >> ~/.bashrc
-        echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
-        echo 'export GOPATH=$HOME/gowork' >> ~/.bashrc
-        echo 'export GOBIN=$GOPATH/bin' >> ~/.bashrc
-        echo 'export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH' >> ~/.bashrc
-        source /etc/profile
-        source ~/.bashrc
-        go version
-
     - name: Clone source code
       working-directory: /workdir
       run: |
@@ -103,7 +80,10 @@ jobs:
       run: cd lede && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd lede && ./scripts/feeds install -a
+      run: |
+        cd lede && ./scripts/feeds install -a
+        rm -rf feeds/packages/lang/golang
+        git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
     - name: Load custom configuration
       run: |
