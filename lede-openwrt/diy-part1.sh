@@ -32,7 +32,7 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 #eqosplus 定时限速插件
 git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 
-
+git clone https://github.com/sbwml/luci-app-xunlei package/xunlei
 
 #iptv
 #git clone https://github.com/riverscn/openwrt-iptvhelper.git package/iptvhelper
