@@ -10,7 +10,9 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-#git reset --hard 0e72b739ca4dd6ee19ae05e9d4a0ac4db5546f65
+
+git reset --hard 75c1433842b25470d112afd0b3555e6999e2e096
+
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
