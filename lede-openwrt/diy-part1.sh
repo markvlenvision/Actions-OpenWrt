@@ -11,7 +11,7 @@
 #
 
 
-git reset --hard 7f19e32c4a49ef859dd80d1063824a709ee23c21
+git reset --hard 92d4a09c0a7e1ecca39332f267514f7e29c9a850
 
 
 # Uncomment a feed source
