@@ -34,8 +34,8 @@
 
 
 #老版
-sed -i 's/"Frp 内网穿透"/"Frp 客户端"/g' package/feeds/luci/luci-app-frpc/po/zh-cn/frp.po
-sed -i 's/"Frps - 通用设置"/"Frp 服务端 - 通用设置"/g' package/feeds/luci/luci-app-frps/po/zh-cn/frps.po
+#sed -i 's/"Frp 内网穿透"/"Frp 客户端"/g' package/feeds/luci/luci-app-frpc/po/zh-cn/frp.po
+#sed -i 's/"Frps - 通用设置"/"Frp 服务端 - 通用设置"/g' package/feeds/luci/luci-app-frps/po/zh-cn/frps.po
 
 #新版
 #sed -i 's/"frp 客户端"/"Frp 客户端"/g' package/feeds/luci/luci-app-frpc/po/zh_Hans/frpc.po
