@@ -12,7 +12,7 @@
 
 
 #自定义版本 Version update to R24.9.18
-git reset --hard 92d4a09c0a7e1ecca39332f267514f7e29c9a850
+#git reset --hard 92d4a09c0a7e1ecca39332f267514f7e29c9a850
 
 
 # Uncomment a feed source
@@ -26,8 +26,10 @@ git reset --hard 92d4a09c0a7e1ecca39332f267514f7e29c9a850
 #git clone https://github.com/fw876/helloworld.git package/helloworld
 #git -C package/helloworld reset --hard b7451f4dc495d74fe5dc5a4597d659f9515dd049
 
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
-git clone https://github.com/xiaorouji/openwrt-passwall2.git  package/openwrt-passwall2
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git package/openwrt-passwall-packages
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall2.git  package/openwrt-passwall2
+
+
 
 #OpenAppFilter 应用过滤
 #git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
