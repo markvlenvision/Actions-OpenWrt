@@ -10,7 +10,8 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-#git reset --hard 0e72b739ca4dd6ee19ae05e9d4a0ac4db5546f65
+#自定义版本 Version update to R24.9.18
+#git reset --hard 92d4a09c0a7e1ecca39332f267514f7e29c9a850
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
@@ -20,16 +21,8 @@
 #echo 'src-git xunlei https://github.com/gngpp/xunlei' >>feeds.conf.default
 
 
-#helloworld
-git clone https://github.com/fw876/helloworld.git package/helloworld
-git -C package/helloworld reset --hard b7451f4dc495d74fe5dc5a4597d659f9515dd049
-
-#adguardhome
-git clone https://github.com/AdguardTeam/AdGuardHome package/adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
-
-
-git clone https://github.com/kenzok8/small-package package/kenzok8
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git package/openwrt-passwall-packages
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall2.git  package/openwrt-passwall2
 
 
 #
