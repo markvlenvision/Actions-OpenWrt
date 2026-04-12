@@ -23,7 +23,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: openwrt-25.12
+  REPO_BRANCH: v25.12.2
   FEEDS_CONF: openwrt-script/feeds.conf.default
   CONFIG_FILE: openwrt-script/.config
   DIY_P1_SH: openwrt-script/diy-part1.sh
