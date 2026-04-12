@@ -12,7 +12,7 @@
 
 #自定义版本 Version update to R24.9.18
 #git reset --hard 92d4a09c0a7e1ecca39332f267514f7e29c9a850
-git checkout v25.12.2
+#git checkout v25.12.2
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
