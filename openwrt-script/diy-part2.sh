@@ -16,6 +16,8 @@
 #sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
 
+sed -i 's/--set=llvm.download-ci-llvm=false/--set=llvm.download-ci-llvm="if-unchanged"/g' feeds/packages/lang/rust/Makefile
+
 ##修改默认主题
 #sed -i "s/luci-theme-bootstrap/luci-theme-$OWRT_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
