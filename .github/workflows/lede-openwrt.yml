@@ -83,7 +83,7 @@ jobs:
       run: |
         cd lede && ./scripts/feeds install -a
         rm -rf feeds/packages/lang/golang
-        git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
+        git clone https://github.com/sbwml/packages_lang_golang -b 27.x feeds/packages/lang/golang
 
     - name: Load custom configuration
       run: |
@@ -168,5 +168,5 @@ jobs:
         releases_keep_latest: 10
         delete_tags: true
         delete_workflows: true
-        workflows_keep_day: 90
+        workflows_keep_day: 3
         gh_token: ${{ secrets.GITHUB_TOKEN }}
