@@ -7,4 +7,4 @@
 #!homepage=https://github.com/LOWERTOP/Shadowrocket-First
 
 [MITM]
-hostname = -www.apple.com,-www.baidu.com,-www.apple.com,-www.baidu.com, -www.onstar.com.cn, -api.shanghaionstar.com
+hostname = -*.apple.com,-*.baidu.com, -www.onstar.com.cn, -api.shanghaionstar.com
