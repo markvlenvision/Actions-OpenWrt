@@ -7,7 +7,6 @@
 # Description: Build OpenWrt using GitHub Actions
 
 name: 编译 OpenWrt
-run-name: 编译 OpenWrt (${{ env.REPO_BRANCH }})
 
 on:
   repository_dispatch:
