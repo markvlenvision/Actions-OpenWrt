@@ -1,0 +1,19 @@
+name: 编译 OpenWrt (LEDE)
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  call-lede-build:
+    uses: ./.github/workflows/openwrt-build-reusable.yml
+    with:
+      build_label: LEDE
+      repo_url: https://github.com/coolsnowwolf/lede
+      repo_branch: master
+      src_dir_name: lede
+      config_dir: openwrt_lede
+      upload_bin_dir: false
+      upload_firmware: true
+      upload_release: true
+      timezone: Asia/Shanghai

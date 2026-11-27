@@ -5,8 +5,10 @@
 #
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
-
+#
 name: 编译 OpenWrt (Official)
+
+run-name: 编译 OpenWrt (Official)
 
 on:
   repository_dispatch:
