@@ -7,9 +7,9 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
-name: 编译 LEDE OpenWrt
+name: 编译 OpenWrt (LEDE)
 
-run-name: 编译 LEDE OpenWrt
+run-name: 编译 OpenWrt (LEDE)
 
 #on:
 #  push:
