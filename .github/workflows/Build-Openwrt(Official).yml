@@ -6,7 +6,7 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 
-name: 编译 OpenWrt
+name: 编译 OpenWrt (Official)
 
 on:
   repository_dispatch:
@@ -15,10 +15,10 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: v25.12.6
-  FEEDS_CONF: openwrt-script/feeds.conf.default
-  CONFIG_FILE: openwrt-script/.config
-  DIY_P1_SH: openwrt-script/diy-part1.sh
-  DIY_P2_SH: openwrt-script/diy-part2.sh
+  FEEDS_CONF: openwrt_official/feeds.conf.default
+  CONFIG_FILE: openwrt_official/.config
+  DIY_P1_SH: openwrt_official/diy-part1.sh
+  DIY_P2_SH: openwrt_official/diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true

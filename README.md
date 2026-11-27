@@ -7,8 +7,8 @@
 ```text
 Actions-OpenWrt/
 ├── .github/workflows/   # GitHub Actions 自动化编译工作流配置
-├── lede-openwrt/        # LEDE / OpenWrt 源码与相关配置
-├── openwrt-script/      # 自定义编译脚本与版本配置（如 v25.12.6 等构建配置）
+├── openwrt_lede/        # LEDE / OpenWrt 源码与相关配置
+├── openwrt_official/      # 自定义编译脚本与版本配置（如 v25.12.6 等构建配置）
 ├── LICENSE              # 开源协议（MIT License）
 └── README.md            # 项目说明文档
 ```
